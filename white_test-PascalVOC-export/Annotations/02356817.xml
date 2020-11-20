@@ -1,0 +1,26 @@
+<annotation verified="yes">
+    <folder>Annotation</folder>
+    <filename>02356817.jpg</filename>
+    <path>white_test-PascalVOC-export/Annotations/02356817.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>960</width>
+        <height>854</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+    <name>Plate</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>320.78790459965927</xmin>
+        <ymin>784.4693486590038</ymin>
+        <xmax>356.76746166950596</xmax>
+        <ymax>819.6436781609195</ymax>
+    </bndbox>
+</object>
+</annotation>

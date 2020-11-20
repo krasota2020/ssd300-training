@@ -31,7 +31,7 @@ class VOCDataset():
                                  for k, v in enumerate(self.idx_to_name)])
 
 
-        self.root_dir = "./Test_Plate_hands-PascalVOC-export/"
+        self.root_dir = root_dir
         self.data_dir = os.path.join(self.root_dir)
         self.image_dir = os.path.join(self.data_dir, 'JPEGImages')
         self.anno_dir = os.path.join(self.data_dir, 'Annotations')
@@ -153,7 +153,7 @@ class VOCDataset():
             #     (self.new_size, self.new_size)), dtype=np.float32)
             img = np.array(img.resize(
                 (self.new_size, self.new_size)), dtype=np.float32)
-            img = (img / 127.0) - 1.0
+            img = (img / 127.5 / 2) 
             img = tf.constant(img, dtype=tf.float32)
             
             img = tf.image.random_brightness(img, aug_coefficent)

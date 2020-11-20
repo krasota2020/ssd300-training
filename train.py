@@ -1,5 +1,7 @@
 import argparse
 import tensorflow as tf
+physical_devices = tf.config.list_physical_devices('GPU')
+tf.config.experimental.set_memory_growth(physical_devices[0], enable=True)
 import os
 import sys
 import time
@@ -29,6 +31,7 @@ parser.add_argument('--gpu-id', default='0')
 args = parser.parse_args()
 
 os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu_id
+
 
 NUM_CLASSES = 2
 
