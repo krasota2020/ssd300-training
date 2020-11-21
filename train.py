@@ -149,6 +149,6 @@ if __name__ == '__main__':
             tf.summary.scalar('conf_loss', avg_val_conf_loss, step=epoch)
             tf.summary.scalar('loc_loss', avg_val_loc_loss, step=epoch)
 
-        if (epoch + 1) % 100 == 0:
+        if (epoch + 1) % 1000 == 0:
             ssd.save_weights(
                 os.path.join(args.checkpoint_dir, 'ssd_epoch_{}.h5'.format(epoch + 1)))
